@@ -89,6 +89,21 @@ a {
   backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   border-radius: 1rem;
+  transition: var(--transition);
+}
+
+.glass:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 255, 136, 0.4);
+  box-shadow: 0 20px 40px -20px rgba(0, 255, 136, 0.2);
+}
+
+.modal-content {
+  background: #0f0f0f;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 .section {
@@ -132,16 +147,24 @@ a {
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .items-center { align-items: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
 .justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
 .gap-2 { gap: 0.5rem; }
 .gap-4 { gap: 1rem; }
 .gap-8 { gap: 2rem; }
 .w-full { width: 100%; }
 .h-full { height: 100%; }
+.h-screen { height: 100vh; }
+.min-h-screen { min-height: 100vh; }
 .z-50 { z-index: 50; }
 .fixed { position: fixed; }
 .top-0 { top: 0; }
 .left-0 { left: 0; }
+.right-0 { right: 0; }
+.bottom-0 { bottom: 0; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
 .relative { position: relative; }
 .absolute { position: absolute; }
 .mb-4 { margin-bottom: 1rem; }
@@ -238,6 +261,31 @@ a {
 }
 
 /* Custom Styles */
+.nav-link {
+  position: relative;
+  transition: var(--transition);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
 input, textarea {
   color: var(--fg);
   font-family: var(--font-mono);
@@ -247,3 +295,31 @@ input::placeholder, textarea::placeholder {
   color: var(--muted);
   opacity: 0.5;
 }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-in {
+  animation-duration: 400ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.zoom-in {
+  animation-name: zoomIn;
+}
+
+.duration-300 { animation-duration: 300ms; }
+.duration-500 { animation-duration: 500ms; }

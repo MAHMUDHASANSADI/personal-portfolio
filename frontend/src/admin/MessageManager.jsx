@@ -79,7 +79,7 @@ const MessageManager = () => {
                     </div>
                   </td>
                   <td className="p-6 text-xs font-bold text-white uppercase">{msg.subject || 'No Subject'}</td>
-                  <td className="p-6 text-xs text-muted max-w-xs truncate">{msg.message}</td>
+                  <td className="p-6 text-xs text-muted truncate">{msg.message}</td>
                   <td className="p-6 text-right">
                     <button onClick={() => handleDelete(msg.id)} className="p-2 glass hover:border-red-500/50 text-muted hover:text-red-500 transition-all">
                       <Trash2 size={14} />

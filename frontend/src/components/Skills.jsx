@@ -28,7 +28,7 @@ const Skills = ({ data }) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((cat, i) => (
-            <div key={i} className="glass p-6 hover:border-accent/50 transition-all duration-300">
+            <div key={i} className="glass p-6">
               <h3 className="text-xs uppercase tracking-widest font-bold mb-6 pb-2 border-b border-accent/30 inline-block">
                 {cat.category}
               </h3>

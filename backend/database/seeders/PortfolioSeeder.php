@@ -52,5 +52,11 @@ class PortfolioSeeder extends Seeder
             'description' => 'Developed certificate management system and optimized previous queries for fast data loading.',
             'stack' => ['PHP', 'Laravel', 'React.js', 'MySQL', 'Redux']
         ]);
+        Project::create([
+            'title' => 'BizzPack ERP (Sales Module)',
+            'category' => 'Enterprise Resource Planning',
+            'description' => 'Comprehensive sales management module featuring proforma invoice generation, LC opening workflows, and multi-currency support.',
+            'stack' => ['PHP', 'Laravel', 'MySQL', 'React.js', 'Redux']
+        ]);
     }
 }

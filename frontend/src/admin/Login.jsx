@@ -35,16 +35,16 @@ const Login = () => {
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-accent/10 blur-[120px] rounded-full"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/5 blur-[120px] rounded-full"></div>
 
-      <div className="w-full max-w-md px-6 z-10">
-        <div className="text-center mb-12">
-          <div className="inline-block p-4 glass rounded-2xl mb-6 border-accent/20">
-            <Lock size={32} className="text-accent" />
+      <div className="w-full md:w-1/2 max-w-2xl px-6 z-10">
+        <div className="text-center mb-8">
+          <div className="inline-block p-3 glass rounded-2xl mb-4 border-accent/20">
+            <Lock size={24} className="text-accent" />
           </div>
-          <h1 className="text-3xl font-extrabold tracking-tighter mb-2">WELCOME <span className="accent-text">BACK</span></h1>
-          <p className="text-xs uppercase tracking-widest text-muted font-bold">Admin Portal Access</p>
+          <h1 className="text-2xl font-extrabold tracking-tighter mb-1">WELCOME <span className="accent-text">BACK</span></h1>
+          <p className="text-[10px] uppercase tracking-widest text-muted font-bold">Admin Portal Access</p>
         </div>
 
-        <div className="glass p-8 md:p-10 border-white/10">
+        <div className="glass p-8 md:p-12 border-white/10">
           {error && (
             <div className="bg-red-500/10 border border-red-500/20 text-red-500 text-[10px] uppercase font-bold tracking-widest p-4 rounded-lg mb-6 text-center">
               {error}
@@ -52,13 +52,13 @@ const Login = () => {
           )}
 
           <form onSubmit={handleLogin} className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-3">
               <label className="text-[10px] uppercase font-bold tracking-widest text-muted">Email Address</label>
               <div className="relative">
-                <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted" />
+                <Mail size={16} className="absolute left-5 top-1/2 -translate-y-1/2 text-muted" />
                 <input 
                   type="email" 
-                  className="w-full bg-white/5 border border-white/10 p-4 pl-12 rounded-xl focus:border-accent outline-none transition-all duration-300 font-mono text-sm"
+                  className="w-full bg-white/5 border border-white/10 p-4 pl-14 rounded-xl focus:border-accent outline-none transition-all duration-300 font-mono text-sm"
                   placeholder="admin@portfolio.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -67,13 +67,13 @@ const Login = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-3">
               <label className="text-[10px] uppercase font-bold tracking-widest text-muted">Password</label>
               <div className="relative">
-                <Lock size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted" />
+                <Lock size={16} className="absolute left-5 top-1/2 -translate-y-1/2 text-muted" />
                 <input 
                   type="password" 
-                  className="w-full bg-white/5 border border-white/10 p-4 pl-12 rounded-xl focus:border-accent outline-none transition-all duration-300 font-mono text-sm"
+                  className="w-full bg-white/5 border border-white/10 p-4 pl-14 rounded-xl focus:border-accent outline-none transition-all duration-300 font-mono text-sm"
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -85,16 +85,16 @@ const Login = () => {
             <button 
               type="submit" 
               disabled={loading}
-              className="btn w-full py-4 mt-4 flex items-center justify-center gap-2"
+              className="btn w-full py-4 mt-6 flex items-center justify-center gap-2"
             >
               {loading ? <Loader2 size={18} className="animate-spin" /> : 'AUTHENTICATE'}
             </button>
           </form>
         </div>
         
-        <p className="text-center mt-8 text-[10px] uppercase tracking-widest text-muted font-bold">
+        {/* <p className="text-center mt-8 text-[10px] uppercase tracking-widest text-muted font-bold">
           Secure Environment &copy; {new Date().getFullYear()}
-        </p>
+        </p> */}
       </div>
     </div>
   );

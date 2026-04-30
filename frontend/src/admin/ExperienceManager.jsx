@@ -165,7 +165,7 @@ const ExperienceManager = () => {
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-[#000]/90 flex items-center justify-center z-[100] backdrop-blur-sm p-4">
-          <div className="glass w-full max-w-2xl border-white/10 shadow-2xl animate-in zoom-in duration-300">
+          <div className="modal-content w-full max-w-2xl border-white/10 shadow-2xl animate-in zoom-in duration-300">
             <div className="p-8 border-b border-white/10 flex justify-between items-center">
               <h2 className="text-xl font-extrabold tracking-tighter uppercase">
                 {editingExp ? 'Edit' : 'Create'} <span className="accent-text">Experience</span>

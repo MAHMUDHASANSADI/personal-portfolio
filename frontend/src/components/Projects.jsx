@@ -15,7 +15,7 @@ const Projects = ({ data }) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, i) => (
-            <div key={i} className="group glass p-8 hover:bg-white/[0.05] transition-all duration-500">
+            <div key={i} className="group glass p-8">
               <span className="text-[10px] uppercase tracking-widest text-accent font-bold mb-4 block">
                 {project.category}
               </span>

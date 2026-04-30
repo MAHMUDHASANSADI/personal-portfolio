@@ -19,11 +19,11 @@ const Navbar = () => {
         </a>
         
         <div className="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest">
-          <a href="#about" className="hover:text-accent">About</a>
-          <a href="#skills" className="hover:text-accent">Skills</a>
-          <a href="#experience" className="hover:text-accent">Experience</a>
-          <a href="#projects" className="hover:text-accent">Projects</a>
-          <a href="#contact" className="hover:text-accent">Contact</a>
+          <a href="#about" className="nav-link">About</a>
+          <a href="#skills" className="nav-link">Skills</a>
+          <a href="#experience" className="nav-link">Experience</a>
+          <a href="#projects" className="nav-link">Projects</a>
+          <a href="#contact" className="nav-link">Contact</a>
         </div>
 
         <a href="#contact" className="btn btn-secondary py-2 px-4 text-[10px]">

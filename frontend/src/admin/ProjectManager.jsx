@@ -133,7 +133,7 @@ const ProjectManager = () => {
                 <tr key={project.id} className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
                   <td className="p-6">
                     <div className="font-bold text-sm">{project.title}</div>
-                    <div className="text-[10px] text-muted truncate max-w-[200px] mt-1">{project.description}</div>
+                    <div className="text-[10px] text-muted mt-1">{project.description}</div>
                   </td>
                   <td className="p-6">
                     <span className="text-[10px] uppercase font-bold px-2 py-1 bg-accent/10 text-accent rounded">
@@ -168,7 +168,7 @@ const ProjectManager = () => {
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-[#000]/90 flex items-center justify-center z-[100] backdrop-blur-sm p-4">
-          <div className="glass w-full max-w-2xl border-white/10 shadow-2xl animate-in zoom-in duration-300">
+          <div className="modal-content w-full max-w-2xl border-white/10 shadow-2xl animate-in zoom-in duration-300">
             <div className="p-8 border-b border-white/10 flex justify-between items-center">
               <h2 className="text-xl font-extrabold tracking-tighter uppercase">
                 {editingProject ? 'Edit' : 'Create'} <span className="accent-text">Project</span>

@@ -8,8 +8,7 @@ import ProjectManager from './admin/ProjectManager';
 import ExperienceManager from './admin/ExperienceManager';
 import SkillManager from './admin/SkillManager';
 import MessageManager from './admin/MessageManager';
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
+import { SpeedInsights } from "@vercel/speed-insights/react";
 // Simple Protected Route
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');

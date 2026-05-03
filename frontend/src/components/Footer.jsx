@@ -12,11 +12,11 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Mahmud Hasan. All rights reserved.
         </p>
         
-        <div className="flex gap-6 text-[10px] font-bold uppercase tracking-widest">
-          <a href="#" className="hover:text-accent">Twitter</a>
-          <a href="#" className="hover:text-accent">Dribbble</a>
-          <a href="#" className="hover:text-accent">Behance</a>
-        </div>
+        {/*<div className="flex gap-6 text-[10px] font-bold uppercase tracking-widest">*/}
+        {/*  <a href="#" className="hover:text-accent">Twitter</a>*/}
+        {/*  <a href="#" className="hover:text-accent">Dribbble</a>*/}
+        {/*  <a href="#" className="hover:text-accent">Behance</a>*/}
+        {/*</div>*/}
       </div>
     </footer>
   );

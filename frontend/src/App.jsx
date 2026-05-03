@@ -8,7 +8,7 @@ import ProjectManager from './admin/ProjectManager';
 import ExperienceManager from './admin/ExperienceManager';
 import SkillManager from './admin/SkillManager';
 import MessageManager from './admin/MessageManager';
-import { SpeedInsights } from "@vercel/speed-insights/react";
+// import { SpeedInsights } from "@vercel/speed-insights/react";
 // Simple Protected Route
 const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
@@ -33,7 +33,7 @@ function App() {
           <Route path="experience" element={<ExperienceManager />} />
           <Route path="skills" element={<SkillManager />} />
           <Route path="messages" element={<MessageManager />} />
-          <SpeedInsights></SpeedInsights>
+          {/*<SpeedInsights></SpeedInsights>*/}
         </Route>
       </Routes>
     </Router>

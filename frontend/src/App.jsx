@@ -8,6 +8,7 @@ import ProjectManager from './admin/ProjectManager';
 import ExperienceManager from './admin/ExperienceManager';
 import SkillManager from './admin/SkillManager';
 import MessageManager from './admin/MessageManager';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Simple Protected Route
 const ProtectedRoute = ({ children }) => {
@@ -33,6 +34,7 @@ function App() {
           <Route path="experience" element={<ExperienceManager />} />
           <Route path="skills" element={<SkillManager />} />
           <Route path="messages" element={<MessageManager />} />
+          <SpeedInsights></SpeedInsights>
         </Route>
       </Routes>
     </Router>
